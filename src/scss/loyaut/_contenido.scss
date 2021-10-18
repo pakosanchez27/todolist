@@ -1,0 +1,187 @@
+.elemento{
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+ &::-webkit-scrollbar-thumb{
+  background-color: rgb(10, 86, 173);
+  border-radius: 20px;
+  border: 1px solid #f1f2f3;
+ }
+}
+
+
+/* contenido */
+
+.contenido {
+  /* border: solid 2px red; */
+  width: 60rem;
+  height: 70rem;
+  margin: 0 auto;
+  position: relative;
+  top: 5rem;
+}
+
+.contenido-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contenido-head p {
+  color: $grey;
+  font-weight: 700;
+  font-size: 3rem;
+}
+.contenido-head img {
+  width: 3rem;
+}
+
+.contenido-crear {
+  height: 8rem;
+  background-color: $grey;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input,
+button {
+  margin-top: 1.5rem;
+}
+button {
+  margin-right: 1rem;
+}
+input[type="text"] {
+  width: 50rem;
+  height: 5rem;
+  outline: none;
+  background-color: #dfe;
+  border: 0;
+  background-color: $grey;
+  padding-left: 1rem;
+
+  font-size: 2rem;
+}
+.animated-border-button {
+  background-color: #263059;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+}
+
+.animated-border-button:before,
+.animated-border-button:after {
+  border: 0 solid transparent;
+  transition: all 0.3s;
+  content: "";
+  height: 0;
+  position: absolute;
+  width: 24px;
+}
+
+.animated-border-button:before {
+  border-top: 2px solid #263059;
+  right: 0;
+  top: -4px;
+}
+
+.animated-border-button:after {
+  border-bottom: 2px solid #263059;
+  bottom: -4px;
+  left: 0;
+}
+
+.animated-border-button:hover:before,
+.animated-border-button:hover:after {
+  width: 100%;
+}
+.contenido-container {
+  /* border: solid 2px rgb(26, 209, 170); */
+  height: 50rem;
+  margin-top: 3rem;
+  border-radius: 1rem;
+  background-color: $grey;
+  box-shadow: 1px 10px 34px -9px rgba(0, 0, 0, 0.68);
+  -webkit-box-shadow: 1px 10px 34px -9px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 1px 10px 34px -9px rgba(0, 0, 0, 0.68);
+}
+.elemento{
+  height: 45rem ;
+}
+.tarea{
+  border-bottom: solid 1px gray;
+  padding: 1rem;
+  display: flex;
+  align-items: center; 
+  gap: 1.5rem;
+  height: 5rem;
+}
+.tarea p {
+  margin-top: 3.5rem;
+  
+}
+.tachado{
+  text-decoration:line-through;
+  color: $greyishBlues;
+}
+.check{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border:solid 1px gray;
+  
+}
+.seleccionado{
+  background: linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+}
+.check:hover{
+  cursor: pointer;
+  background: linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+}
+
+.contenido-controls{
+
+  height: 3rem;
+  border-top: solid 1px $greyish;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+}
+.contenido-controls p {
+  color: grey;
+}
+.enlces{
+  display: flex;
+  gap: 2rem
+}
+.enlace{
+  text-decoration: none;
+  color: grey;
+  
+}
+
+
+.enlces a:hover{
+  cursor: pointer;
+  color: $Bblue;
+}
+
+.icono{
+  content: url('/../src/img/icon-sun.svg');
+}
+
+.alerta{
+  color: rgb(109, 18, 18);
+  font-size: 2rem;
+  
+
+}

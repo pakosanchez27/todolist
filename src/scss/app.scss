@@ -1,0 +1,14 @@
+@import 'base/variable'; 
+@import 'base/normalize'; 
+@import 'base/globales';
+@import 'base/mixins'; 
+
+
+// Loyaut
+
+@import 'loyaut/header';
+@import 'loyaut/contenido';
+@import 'loyaut/footer';
+
+// DarkMode
+@import 'loyaut/darkmode';

@@ -1,0 +1,57 @@
+.darkMode{
+
+        background-color: rgb(21, 18, 32);
+
+    .imagen {
+        background-image: url(../../src/img/bg-desktop-dark.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+       
+      }
+      
+/* contenido */
+
+  
+  
+  .contenido-head p {
+    color: $grey;
+    font-weight: 700;
+    font-size: 3rem;
+  }
+ 
+  
+  .contenido-crear {
+    height: 8rem;
+    background-color: $modeDesaturated;
+    margin: 0 auto;
+    border-radius: 1rem;
+  }
+ 
+  input[type="text"]{
+    width: 50rem;
+    height: 5rem;
+    outline: none;
+    background-color: $modeDesaturated;
+    border: 0;
+    padding-left: 1rem;
+    font-size: 2rem;
+    color: gray;
+   
+  }
+  
+  .contenido-container {
+    background-color: $modeDesaturated;
+    
+  }
+ 
+ 
+  .tarea p {
+    color: white;
+    
+  }
+ 
+
+             
+
+}

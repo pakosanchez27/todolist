@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desarrollo/css/app.css">
+    <link rel="stylesheet" href="css/darkMode.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>To-DO List</title>
+</head>
+
+<body class="darkMode" id="body" >
+    <header class="header">
+        <div class="imagen"></div>
+    </header>
+    <main class="contenido">
+        <div class="contenido-head">
+            <p>T O D O</p>
+            <div>
+                <a href="#"  id="darkMode" class="icono"><img src="src/img/icon-moon.svg"></a>
+            </div>
+        </div>
+        <div class="contenido-crear">
+            <form class="formulario" id="formulario">
+                <input name="tarea" id="tarea" type="text" placeholder="Create a new todo..." >
+                <button id="newTarea" class="animated-border-button">Crear</button>
+            </form>
+        </div>
+     
+        <div class="contenido-container ">
+            <div class="elemento" id="container">
+            
+             </div>
+            <div class="contenido-controls" ">
+                <div id="items"></div>
+                <div class="enlces">
+                <a href="#" class="enlace">All</a>
+                <a href="#" class="enlace">Active</a>
+                <a href="#" class="enlace">Complete</a>
+                </div>
+                <a href="#" id="clean" class="enlace">Clear Complete</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Proyect by Francisco Sánchez</p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
