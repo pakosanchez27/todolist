@@ -7,6 +7,7 @@ const clean = document.querySelector("#clean");
 const darkMode = document.querySelector("#darkMode");
 const mensajeAlerta = document.querySelector('.contenido-crear');
 
+
 const tareas = [];
 
 //  Eventos
@@ -15,21 +16,27 @@ document.addEventListener("DOMContentLoaded", () => {
   formulario.addEventListener("submit", nuevatarea);
   clean.addEventListener("click", limpiarPanel);
   darkMode.addEventListener("click", activarDarkMde);
+  
 });
 
 // Funciones
-
-function limpiarPanel() {
-  tareas.splice(0, tareas.length);
-  console.log(tareas);
-  limpiarHTML(container);
-}
 
 function nuevatarea(e) {
   e.preventDefault();
 
   // obtener los datos
   const tarea = document.querySelector("#tarea").value;
+  const id = Date.now();
+ 
+  const obj = {
+    id: id,
+    tarea: tarea
+  }
+
+  
+  
+
+
 
   // Validar campo vacio
    if(tarea === ''){
@@ -37,29 +44,48 @@ function nuevatarea(e) {
      return
   }else{
     //agregar al areglo
-    mostrarHtml(tarea);
+    mostrarHtml(obj);
 
     formulario.reset();
+
+    
 }
- 
+
 }
-function mostrarHtml(tarea) {
-  tareas.push(tarea);
+
+
+
+function mostrarHtml(obj) {
+  tareas.push(obj);
+
+  
   // mostrar
-  console.log(tareas);
+  
   limpiarHTML(contenedor);
-  tareas.forEach((to) => {
+  tareas.forEach((tarea, id) => {
     const divTarea = document.createElement("div");
     divTarea.classList.add("tarea");
     divTarea.innerHTML = `
-          <button class="check"><img src="src/img/icon-check.svg"></button>
-          <p>${to}</p>
+          <button class="check seleccionado" id="check" data-id="${tarea.id}"><img src="src/img/icon-check.svg"></button>
+          <p class="tachado">${tarea.tarea}</p>
           `;
 
     container.appendChild(divTarea);
     numeroItems();
+     check();
   });
 }
+function check() {
+  const check = document.querySelector('.check');
+  console.log(check);
+}
+
+function limpiarPanel() {
+  tareas.splice(0, tareas.length);
+ 
+  limpiarHTML(container);
+}
+
 
 function limpiarHTML(elemento) {
   while (elemento.firstChild) {
