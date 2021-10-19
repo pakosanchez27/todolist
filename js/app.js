@@ -63,11 +63,11 @@ function mostrarHtml(obj) {
   
   limpiarHTML(contenedor);
   tareas.forEach((tarea, id) => {
-    const divTarea = document.createElement("div");
+    const divTarea = document.createElement("form");
     divTarea.classList.add("tarea");
     divTarea.innerHTML = `
-          <button class="check seleccionado" id="check" data-id="${tarea.id}"><img src="src/img/icon-check.svg"></button>
-          <p class="tachado">${tarea.tarea}</p>
+          <button class="check seleccionado tachado" id="check" data-id="${tarea.id}"><img src="src/img/icon-check.svg"></button>
+          <p class="achado">${tarea.tarea}</p>
           `;
 
     container.appendChild(divTarea);
@@ -75,9 +75,12 @@ function mostrarHtml(obj) {
      check();
   });
 }
-function check() {
-  const check = document.querySelector('.check');
-  console.log(check);
+function check(e) {
+  e.preventDefault();
+  const check = document.querySelector('.tarea');
+  check.addEventListener('submit', () => {
+    console.log('hola');
+  })
 }
 
 function limpiarPanel() {
