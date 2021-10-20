@@ -501,7 +501,9 @@ input[type=text] {
 
 .tachado {
   text-decoration: line-through;
-  color: #d2d3db;
+}
+.tachado p {
+  color: #771515;
 }
 
 .check {

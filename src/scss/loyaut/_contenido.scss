@@ -125,9 +125,11 @@ input[type="text"] {
   margin-top: 3.5rem;
   
 }
-.tachado{
+.tachado {
   text-decoration:line-through;
-  color: $greyishBlues;
+   p {
+    color: rgb(119, 21, 21);
+  
 }
 .check{
   width: 4rem;
@@ -176,7 +178,7 @@ input[type="text"] {
 }
 
 .icono{
-  content: url('/../src/img/icon-sun.svg');
+  content: url('../src/img/icon-sun.svg');
 }
 
 .alerta{

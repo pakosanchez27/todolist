@@ -58,30 +58,48 @@ function nuevatarea(e) {
 function mostrarHtml(obj) {
   tareas.push(obj);
 
-  
+ 
   // mostrar
   
   limpiarHTML(contenedor);
   tareas.forEach((tarea, id) => {
-    const divTarea = document.createElement("form");
-    divTarea.classList.add("tarea");
+    const divTarea = document.createElement("a");
+    divTarea.classList.add('tarea');
+    divTarea.setAttribute("data-id", `${tarea.id}`);
+
     divTarea.innerHTML = `
-          <button class="check seleccionado tachado" id="check" data-id="${tarea.id}"><img src="src/img/icon-check.svg"></button>
-          <p class="achado">${tarea.tarea}</p>
+          <button class="check ${tarea.id}" id="select" data="${tarea.id}" ><img src="src/img/icon-check.svg"></button>
+          <p  id="tachado" tach="${tarea.id}">${tarea.tarea}</p>
           `;
 
     container.appendChild(divTarea);
     numeroItems();
      check();
+     function check() {
+  
+      const check = document.querySelector(`[data-id="${tarea.id}"] `);
+      check.addEventListener('click', () => {
+        const seleccion = document.querySelector(`[data="${tarea.id}"]`);
+        const tachado = document.querySelector(`[tach="${tarea.id}"]`);
+ 
+        if(seleccion.classList.contains('seleccionado')){
+          seleccion.classList.remove('seleccionado');
+        }else{
+          seleccion.classList.add('seleccionado');
+         
+        }
+
+        if(tachado.classList.contains('tachado')){
+          tachado.classList.remove('tachado');
+        }else{
+          tachado.classList.add('tachado');
+        }
+      
+      })
+    }
   });
 }
-function check(e) {
-  e.preventDefault();
-  const check = document.querySelector('.tarea');
-  check.addEventListener('submit', () => {
-    console.log('hola');
-  })
-}
+
 
 function limpiarPanel() {
   tareas.splice(0, tareas.length);
