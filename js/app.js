@@ -158,11 +158,11 @@ function activarDarkMde() {
 
   if (body.classList.contains("darkMode")) {
     body.classList.remove("darkMode");
-    lunsol.src="/src/img/icon-moon.svg";
+    lunsol.src="src/img/icon-moon.svg";
   
   } else {
     body.classList.add("darkMode");
-    lunsol.src="/src/img/icon-sun.svg";
+    lunsol.src="src/img/icon-sun.svg";
     
   }
 }
