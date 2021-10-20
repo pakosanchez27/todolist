@@ -178,7 +178,7 @@ input[type="text"] {
 }
 
 .icono{
-  content: url('src/img/icon-sun.svg');
+ background: url('/src/img/icon-sun.svg');
 }
 
 .alerta{
@@ -187,3 +187,34 @@ input[type="text"] {
   
 
 }
+}
+
+.contenido-controls{
+
+  height: 3rem;
+  border-top: solid 1px var(--greyish);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+}
+.contenido-controls p {
+  color: grey;
+}
+.enlces{
+  display: flex;
+  gap: 2rem;
+  a:hover{
+    cursor: pointer;
+    color: $Bblue;
+  }
+}
+.enlace{
+  text-decoration: none;
+  color: grey;
+  
+}
+

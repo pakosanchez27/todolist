@@ -13,6 +13,11 @@ const tareas = [];
 //  Eventos
 
 document.addEventListener("DOMContentLoaded", () => {
+  const dia = 'icon-sun.svg'
+  const noche = 'icon-moon.svg'
+
+  
+
   formulario.addEventListener("submit", nuevatarea);
   clean.addEventListener("click", limpiarPanel);
   darkMode.addEventListener("click", activarDarkMde);
@@ -146,12 +151,19 @@ function numeroItems() {
 function activarDarkMde() {
   const body = document.querySelector("#body");
   const icono = document.querySelector("#darkMode");
+  const lunsol = document.querySelector('.icono')
+
+
+
 
   if (body.classList.contains("darkMode")) {
     body.classList.remove("darkMode");
-    icono.classList.remove("icono");
+    lunsol.src="/src/img/icon-moon.svg";
+  
   } else {
     body.classList.add("darkMode");
-    icono.classList.add("icono");
+    lunsol.src="/src/img/icon-sun.svg";
+    
   }
 }
+

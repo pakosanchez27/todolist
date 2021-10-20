@@ -51,7 +51,19 @@
     
   }
  
-
+  .elemento{
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+  }
+   &::-webkit-scrollbar-thumb{
+    background-color: rgb(10, 86, 173);
+    border-radius: 20px;
+    border: 1px solid #f1f2f3;
+   }
+  }
+  
+  
              
 
 }

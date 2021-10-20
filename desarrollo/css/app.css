@@ -505,26 +505,55 @@ input[type=text] {
 .tachado p {
   color: #771515;
 }
-
-.check {
+.tachado .check {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   border: solid 1px gray;
 }
-
-.seleccionado {
+.tachado .seleccionado {
   background: linear-gradient(#57ddff, #c058f3);
 }
-
-.check:hover {
+.tachado .check:hover {
   cursor: pointer;
   background: linear-gradient(#57ddff, #c058f3);
+}
+.tachado .contenido-controls {
+  height: 3rem;
+  border-top: solid 1px #e4e5f1;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.tachado .contenido-controls p {
+  color: grey;
+}
+.tachado .enlces {
+  display: flex;
+  gap: 2rem;
+}
+.tachado .enlace {
+  text-decoration: none;
+  color: grey;
+}
+.tachado .enlces a:hover {
+  cursor: pointer;
+  color: #3a7bfd;
+}
+.tachado .icono {
+  background: url("/src/img/icon-sun.svg");
+}
+.tachado .alerta {
+  color: #6d1212;
+  font-size: 2rem;
 }
 
 .contenido-controls {
   height: 3rem;
-  border-top: solid 1px #e4e5f1;
+  border-top: solid 1px var(--greyish);
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   display: flex;
@@ -541,24 +570,14 @@ input[type=text] {
   display: flex;
   gap: 2rem;
 }
-
-.enlace {
-  text-decoration: none;
-  color: grey;
-}
-
 .enlces a:hover {
   cursor: pointer;
   color: #3a7bfd;
 }
 
-.icono {
-  content: url("/../src/img/icon-sun.svg");
-}
-
-.alerta {
-  color: #6d1212;
-  font-size: 2rem;
+.enlace {
+  text-decoration: none;
+  color: grey;
 }
 
 /* footer */
@@ -604,4 +623,15 @@ input[type=text] {
 }
 .darkMode .tarea p {
   color: white;
+}
+.darkMode .elemento {
+  overflow-y: scroll;
+}
+.darkMode .elemento::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.darkMode .elemento::-webkit-scrollbar-thumb {
+  background-color: #0a56ad;
+  border-radius: 20px;
+  border: 1px solid #f1f2f3;
 }
