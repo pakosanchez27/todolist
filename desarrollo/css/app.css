@@ -505,20 +505,23 @@ input[type=text] {
 .tachado p {
   color: #771515;
 }
-.tachado .check {
+
+.check {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   border: solid 1px gray;
 }
-.tachado .seleccionado {
-  background: linear-gradient(#57ddff, #c058f3);
-}
-.tachado .check:hover {
+.check :hover {
   cursor: pointer;
   background: linear-gradient(#57ddff, #c058f3);
 }
-.tachado .contenido-controls {
+
+.seleccionado {
+  background: linear-gradient(#57ddff, #c058f3);
+}
+
+.contenido-controls {
   height: 3rem;
   border-top: solid 1px #e4e5f1;
   border-bottom-left-radius: 1rem;
@@ -528,25 +531,27 @@ input[type=text] {
   align-items: center;
   padding: 1rem;
 }
-.tachado .contenido-controls p {
+
+.contenido-controls p {
   color: grey;
 }
-.tachado .enlces {
+
+.enlces {
   display: flex;
   gap: 2rem;
 }
-.tachado .enlace {
+
+.enlace {
   text-decoration: none;
   color: grey;
 }
-.tachado .enlces a:hover {
+
+.enlces a:hover {
   cursor: pointer;
   color: #3a7bfd;
 }
-.tachado .icono {
-  background: url("/src/img/icon-sun.svg");
-}
-.tachado .alerta {
+
+.alerta {
   color: #6d1212;
   font-size: 2rem;
 }

@@ -53,6 +53,7 @@ button {
 }
 button {
   margin-right: 1rem;
+  
 }
 input[type="text"] {
   width: 50rem;
@@ -129,20 +130,19 @@ input[type="text"] {
   text-decoration:line-through;
    p {
     color: rgb(119, 21, 21);
-  
+   }
 }
 .check{
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   border:solid 1px gray;
-  
+  :hover{
+    cursor: pointer;
+    background: linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+  }
 }
 .seleccionado{
-  background: linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
-}
-.check:hover{
-  cursor: pointer;
   background: linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
 }
 
@@ -177,9 +177,6 @@ input[type="text"] {
   color: $Bblue;
 }
 
-.icono{
- background: url('/src/img/icon-sun.svg');
-}
 
 .alerta{
   color: rgb(109, 18, 18);
@@ -187,7 +184,7 @@ input[type="text"] {
   
 
 }
-}
+
 
 .contenido-controls{
 

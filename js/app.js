@@ -73,7 +73,7 @@ function mostrarHtml(obj) {
     divTarea.setAttribute("data-id", `${tarea.id}`);
 
     divTarea.innerHTML = `
-          <button class="check ${tarea.id}" id="select" data="${tarea.id}" ><img src="src/img/icon-check.svg"></button>
+          <button class="check" id="select" data="${tarea.id}" ><img src="src/img/icon-check.svg"></button>
           <p  id="tachado" tach="${tarea.id}">${tarea.tarea}</p>
           `;
 
